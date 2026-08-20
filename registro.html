@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="es"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Danna Gabriela Nova Romero</title>
+
+<style>
+    body {
+        background-color: #dcecfc;
+    }
+
+    .titulo {
+        color: #d9a404;
+    }
+
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        border: 1px solid #e6c65c;
+    }
+
+    .conten-principal {
+        display: flex;
+        border: 1px solid #e6c65c;
+        min-height: 84vh;
+    }
+
+    .parrafo {
+        color: #1f4e79;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .conten-parrafo {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #e6c65c;
+        margin: 10px;
+        flex: 1;
+    }
+
+    .p-nombre {
+        color: #d9a404;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .botones_1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .boton_1 {
+        display: inline-block;
+        padding: 10px 20px;
+        color: #1f4e79;
+        background: transparent;
+        border: 2px solid #e0a91f;
+        border-radius: 6px;
+        text-decoration: none;
+        box-shadow: 0 0 8px rgba(224, 169, 31, 0.5),
+                    inset 0 0 10px rgba(224, 169, 31, 0.12);
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .Horario {
+        color: #1f4e79;
+        text-align: center;
+        border: 1px solid #e6c65c;
+        margin-top: 20px;
+    }
+
+    .tabla {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #e6c65c;
+    }
+
+    .tabla th {
+        background-color: #f7e18a;
+        color: #1f4e79;
+    }
+
+    .tabla th,
+    .tabla td {
+        border: 1px solid #e6c65c;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .modo-hacker th {
+        background-color: #f4c542 !important;
+        color: #1f4e79 !important;
+    }
+
+    .modo-hacker td {
+        background-color: #cfe0f5 !important;
+        color: #1f4e79 !important;
+    }
+
+    /* =========================
+       SECCIÓN DE TAREAS
+       ========================= */
+
+    #seccion-tareas {
+        display: none;
+        color: #1f4e79;
+        border: 1px solid #e6c65c;
+        margin: 20px 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #seccion-tareas h2 {
+        color: #d9a404;
+    }
+
+    .formulario-tarea {
+        border: 1px solid #e6c65c;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .formulario-tarea label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .formulario-tarea select,
+    .formulario-tarea textarea {
+        width: 80%;
+        max-width: 500px;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #e6c65c;
+        border-radius: 5px;
+        background-color: #f2f8ff;
+        color: #1f4e79;
+    }
+
+    .formulario-tarea textarea {
+        height: 100px;
+        resize: vertical;
+    }
+
+    .btn-agregar {
+        padding: 10px 20px;
+        color: #1f4e79;
+        background: transparent;
+        border: 2px solid #e0a91f;
+        border-radius: 6px;
+        cursor: pointer;
+        box-shadow: 0 0 8px rgba(224, 169, 31, 0.5);
+    }
+
+    #lista-tareas {
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .tarea {
+        background-color: #f2f8ff;
+        border: 1px solid #e6c65c;
+        border-radius: 6px;
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .tarea-hecha {
+        opacity: 0.6;
+    }
+
+    .tarea-hecha .descripcion-tarea {
+        text-decoration: line-through;
+    }
+
+    .tarea-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .tarea-materia {
+        color: #d9a404;
+        font-weight: bold;
+    }
+
+    .descripcion-tarea {
+        color: #1f4e79;
+    }
+
+    .btn-eliminar {
+        padding: 6px 12px;
+        color: #1f4e79;
+        background-color: transparent;
+        border: 1px solid #e0a91f;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .sin-tareas {
+        text-align: center;
+    }
+</style>
+
+</head>
+
+<body>
+
+<header> <div class="contenedor"> <h1 class="titulo">Danna Gabriela Nova Romero</h1> </div> </header>
+
+<br>
+
+<div class="conten-principal">
+
+<div class="conten-parrafo">
+
+    <h1 class="p-nombre">Danna Gabriela Nova Romero</h1>
+
+    <p class="parrafo">
+        Hola, soy Danna, tengo 14 años, me gusta el voleibol, el sushi,
+        escuchar música y jugar con amigos, me gusta hacer decoraciones y pintar.
+    </p>
+
+    <!-- BOTONES -->
+    <div class="botones_1">
+
+        <button class="boton_1" id="btn-toggle">
+            Horario
+        </button>
+
+        <button class="boton_1" id="btn-color">
+            Botón 2
+        </button>
+
+        <button class="boton_1" id="btn-tareas">
+            Tareas
+        </button>
+
+        <a class="boton_1" href="Registro.html">
+            Registro
+        </a>
+
+    </div>
+
+    <!-- =========================
+         HORARIO
+         ========================= -->
+
+    <div id="Horario" class="Horario">
+
+        <h1 class="h-titulo">
+            Horario
+        </h1>
+
+        <table class="tabla" id="tabla-clases">
+
+            <thead>
+                <tr>
+                    <th>Día 1</th>
+                    <th>Día 2</th>
+                    <th>Día 3</th>
+                    <th>Día 4</th>
+                    <th>Día 5</th>
+                    <th>Día 6</th>
+                    <th>Día 7</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Biología</td>
+                    <td>Edu. Física</td>
+                    <td>Español</td>
+                    <td>Francés</td>
+                    <td>Biología</td>
+                    <td>Edu. Física</td>
+                    <td>Inglés</td>
+                </tr>
+
+                <tr>
+                    <td>Matemáticas</td>
+                    <td>Sociales</td>
+                    <td>Sociales</td>
+                    <td>Español</td>
+                    <td>Matemáticas</td>
+                    <td>Inglés</td>
+                    <td>Sociales</td>
+                </tr>
+
+                <tr>
+                    <td>Descanso</td>
+                    <td>Descanso</td>
+                    <td>Descanso</td>
+                    <td>Descanso</td>
+                    <td>Descanso</td>
+                    <td>Descanso</td>
+                    <td>Descanso</td>
+                </tr>
+
+                <tr>
+                    <td>Español</td>
+                    <td>Filosofía</td>
+                    <td>Matemáticas</td>
+                    <td>Informática</td>
+                    <td>Inglés</td>
+                    <td>Francés</td>
+                    <td>Informática</td>
+                </tr>
+
+                <tr>
+                    <td>Sociales</td>
+                    <td>Matemáticas</td>
+                    <td>Física</td>
+                    <td>Inglés</td>
+                    <td>Sociales</td>
+                    <td>Matemáticas</td>
+                    <td>Química</td>
+                </tr>
+
+                <tr>
+                    <td>Francés</td>
+                    <td>SKILLS</td>
+                    <td>Danzas</td>
+                    <td>Ética</td>
+                    <td>Dibujo</td>
+                    <td>Sociales</td>
+                    <td>Biología</td>
+                </tr>
+
+                <tr>
+                    <td>Cátedra</td>
+                    <td>Español</td>
+                    <td>PILEO</td>
+                    <td>Dibujo</td>
+                    <td>PILEO</td>
+                    <td>Español</td>
+                    <td>Inglés</td>
+                </tr>
+
+                <tr>
+                    <td>Inglés</td>
+                    <td>Inglés</td>
+                    <td>Biología</td>
+                    <td>Matemáticas</td>
+                    <td>Danzas</td>
+                    <td>Informática</td>
+                    <td>Matemáticas</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- =========================
+         TAREAS
+         ========================= -->
+
+    <div id="seccion-tareas">
+
+        <h2>Mis Tareas</h2>
+
+        <div class="formulario-tarea">
+
+            <label for="materia">
+                Escoge la materia:
+            </label>
+
+            <select id="materia">
+
+                <option value="">
+                    -- Selecciona una materia --
+                </option>
+
+                <option>Biología</option>
+                <option>Matemáticas</option>
+                <option>Español</option>
+                <option>Inglés</option>
+                <option>Francés</option>
+                <option>Sociales</option>
+                <option>Física</option>
+                <option>Química</option>
+                <option>Filosofía</option>
+                <option>Informática</option>
+                <option>Educación Física</option>
+                <option>Ética</option>
+                <option>Danzas</option>
+                <option>Dibujo</option>
+                <option>Cátedra</option>
+                <option>PILEO</option>
+                <option>SKILLS</option>
+                <option>Geografía</option>
+                <option>Arte</option>
+                <option>Literatura</option>
+                <option>Tecnología</option>
+
+            </select>
+
+            <label for="descripcion">
+                Descripción de la tarea:
+            </label>
+
+            <textarea
+                id="descripcion"
+                placeholder="Escribe aquí tu tarea..."
+            ></textarea>
+
+            <br>
+
+            <button class="btn-agregar" id="btn-agregar">
+                Agregar tarea
+            </button>
+
+        </div>
+
+        <div id="lista-tareas"></div>
+
+    </div>
+
+</div>
+
+</div>
+
+<script> /* ========================= HORARIO ========================= */ const horario = document.getElementById("Horario"); const btnHorario = document.getElementById("btn-toggle"); /* El horario aparece al entrar */ horario.style.display = "block"; btnHorario.addEventListener("click", function () { if (horario.style.display === "none") { horario.style.display = "block"; } else { horario.style.display = "none"; } }); /* ========================= CAMBIAR COLOR ========================= */ const botonColor = document.getElementById("btn-color"); const miTabla = document.getElementById("tabla-clases"); botonColor.addEventListener("click", function () { miTabla.classList.toggle("modo-hacker"); }); /* ========================= BOTÓN TAREAS ========================= */ const btnTareas = document.getElementById("btn-tareas"); const seccionTareas = document.getElementById("seccion-tareas"); btnTareas.addEventListener("click", function () { if (seccionTareas.style.display === "none" || seccionTareas.style.display === "") { seccionTareas.style.display = "block"; } else { seccionTareas.style.display = "none"; } }); /* ========================= SISTEMA DE TAREAS ========================= */ const materia = document.getElementById("materia"); const descripcion = document.getElementById("descripcion"); const btnAgregar = document.getElementById("btn-agregar"); const listaTareas = document.getElementById("lista-tareas"); /* Recuperar tareas guardadas */ let tareas = JSON.parse( localStorage.getItem("misTareas") ) || []; /* ========================= MOSTRAR TAREAS ========================= */ function mostrarTareas() { listaTareas.innerHTML = ""; if (tareas.length === 0) { listaTareas.innerHTML = '<p class="sin-tareas">No tienes tareas guardadas.</p>'; return; } tareas.forEach(function (tarea, indice) { const div = document.createElement("div"); div.className = "tarea"; if (tarea.hecha) { div.classList.add("tarea-hecha"); } const contenedor = document.createElement("div"); contenedor.className = "tarea-info"; /* Casilla */ const checkbox = document.createElement("input"); checkbox.type = "checkbox"; checkbox.checked = tarea.hecha; checkbox.addEventListener("change", function () { tareas[indice].hecha = checkbox.checked; guardarTareas(); mostrarTareas(); }); /* Materia */ const nombreMateria = document.createElement("span"); nombreMateria.className = "tarea-materia"; nombreMateria.textContent = tarea.materia + ":"; /* Descripción */ const texto = document.createElement("span"); texto.className = "descripcion-tarea"; texto.textContent = tarea.descripcion; /* Botón eliminar */ const botonEliminar = document.createElement("button"); botonEliminar.className = "btn-eliminar"; botonEliminar.textContent = "Eliminar"; botonEliminar.addEventListener( "click", function () { tareas.splice(indice, 1); guardarTareas(); mostrarTareas(); } ); contenedor.appendChild(checkbox); contenedor.appendChild(nombreMateria); contenedor.appendChild(texto); contenedor.appendChild(botonEliminar); div.appendChild(contenedor); listaTareas.appendChild(div); }); } /* ========================= GUARDAR TAREAS ========================= */ function guardarTareas() { localStorage.setItem( "misTareas", JSON.stringify(tareas) ); } /* ========================= AGREGAR TAREA ========================= */ btnAgregar.addEventListener("click", function () { const materiaSeleccionada = materia.value; const descripcionTarea = descripcion.value.trim(); if (materiaSeleccionada === "") { alert("Por favor, selecciona una materia."); return; } if (descripcionTarea === "") { alert("Por favor, escribe la tarea."); return; } const nuevaTarea = { materia: materiaSeleccionada, descripcion: descripcionTarea, hecha: false }; tareas.push(nuevaTarea); guardarTareas(); materia.value = ""; descripcion.value = ""; mostrarTareas(); }); /* ========================= MOSTRAR TAREAS GUARDADAS ========================= */ mostrarTareas(); </script>
+
+</body> </html>
